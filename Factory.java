@@ -1,13 +1,14 @@
-public class factory {
+public class Factory {
+    // Method that returns the animal object that matches the parameter.
     public AnimalFactory get(String type) {
         if (type == null) {
             return null;
         } else if (type.equalsIgnoreCase("Cheetah")) {
-            return new animalFactory1();
+            return new Cheetah();
         } else if (type.equalsIgnoreCase("Kangaroo")) {
-            return new animalFactory2();
+            return new Kangaroo();
         } else if (type.equalsIgnoreCase("Lion")) {
-            return new animalFactory3();
+            return new Lion();
         }
         return null;
     }

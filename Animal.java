@@ -1,6 +1,8 @@
 public class Animal {
     public static void main(String[] args) {
-        factory factory = new factory();
+        //Initialize the Factory class
+        Factory factory = new Factory();
+        // Assign instances of AnimalFactory with new objects from the animal classes
         AnimalFactory animalFactory1 = factory.get("Kangaroo");
         animalFactory1.create();
         AnimalFactory animalFactory2 = factory.get("Cheetah");
