@@ -31,16 +31,21 @@ public class factory {
         } else if (type.equalsIgnoreCase ("Kangaroo")) {
             return new animal1();
         } else if (type.equalsIgnoreCase("Cheetah")) {
-return new animal2();
-}else if(type.equalsIgnoreCase("Lion")){
-return new animal3();}   
-return null;}}
+            return new animal2();
+        } else if (type.equalsIgnoreCase("Lion")) {
+            return new animal3();
+        }
+        return null;
+    }
+}
 public class Main {
-public static void main(String[] args) {
-factory factory = new factory();
-Animal animal1 = factory.get("Kangaroo");
-animal1.create();
-Animal animal2 = factory.get("Cheetah");
-animal2.create();
-Animal animal3 = factory.get("Lion");
-animal3.create();}}
+    public static void main(String[] args) {
+        factory factory = new factory();
+        Animal animal1 = factory.get("Kangaroo");
+        animal1.create();
+        Animal animal2 = factory.get("Cheetah");
+        animal2.create();
+        Animal animal3 = factory.get("Lion");
+        animal3.create();
+    }
+}
