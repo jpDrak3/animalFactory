@@ -1,4 +1,4 @@
-public class Animal {
+public class Main {
     public static void main(String[] args) {
         //Initialize the Factory class
         Factory factory = new Factory();
