@@ -1,13 +1,21 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        //Initialize the Factory class
+        Scanner scanner = new Scanner(System.in);
+        // Initialize the Factory class
         Factory factory = new Factory();
-        // Assign instances of AnimalFactory with new objects from the animal classes
-        AnimalFactory animalFactory1 = factory.get("Kangaroo");
-        animalFactory1.create();
-        AnimalFactory animalFactory2 = factory.get("Cheetah");
-        animalFactory2.create();
-        AnimalFactory animalFactory3 = factory.get("Lion");
-        animalFactory3.create();
+
+        // Ask the user which animal to create
+        System.out.println("Which animal would you like to create? (Kangaroo, Cheetah, Lion)");
+        String choice = scanner.nextLine();
+
+        // Create the selected animal
+        AnimalFactory animalFactory = factory.get(choice);
+        if (animalFactory != null) {
+            animalFactory.create();
+        } else {
+            System.out.println("Invalid choice. Please choose from Kangaroo, Cheetah, or Lion.");
+        }
     }
 }
